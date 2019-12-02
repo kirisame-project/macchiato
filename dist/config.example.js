@@ -1,0 +1,16 @@
+window.setConfiguration({
+    "capture": {
+        "frameRate": 30,
+        "height": 1080,
+        "width": 1920
+    },
+    "debug": true,
+    "rate": 250,
+    "render": {
+        "threshold": 0.8
+    },
+    "websocket": {
+        "endpoint": "ws://localhost:51997/api/v2/websocket",
+        "retry": 3000
+    }
+})
