@@ -1,0 +1,23 @@
+name: Build Production
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - name: npm install period
+      run: npm install .
+    - name: npm run build
+      run: npm run build
+    - name: upload artifact
+      uses: actions/upload-artifact@v1.0.0
+      with:
+        name: macchiato
+        path: dist
