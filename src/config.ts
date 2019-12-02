@@ -5,6 +5,7 @@ import { WebSocketConfiguration } from './websockets/config'
 export interface AppConfiguration {
     capture: CaptureConfiguration
     debug: boolean
+    rate: number
     render: RendererConfiguration
     websocket: WebSocketConfiguration
 }

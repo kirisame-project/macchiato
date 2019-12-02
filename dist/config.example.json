@@ -5,6 +5,7 @@
         "width": 1920
     },
     "debug": true,
+    "rate": 250,
     "render": {
         "threshold": 0.8
     },

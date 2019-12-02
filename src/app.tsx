@@ -21,7 +21,7 @@ function createVideoElement(height: number, width: number) {
 
 export function AppMain(props: { config: AppConfiguration }) {
     const { config } = props
-    const { capture, render, websocket } = config
+    const { capture, rate, render, websocket } = config
 
     const canvas = useRef<HTMLCanvasElement>(null)
 
@@ -113,7 +113,7 @@ export function AppMain(props: { config: AppConfiguration }) {
 
                 const image = await camera.current.getBlob()
                 client.current.sendImageRequest(image)
-                setTimeout(() => invokeCapture(), 250)
+                setTimeout(() => invokeCapture(), rate)
             }
             setImmediate(() => invokeCapture())
         }
